@@ -1,0 +1,22 @@
+CountDownLatchService
+
+RUN 1
+
+2019-08-26 15:21:42.022  INFO 2208 --- [           main] poc.java.service.CountDownLatchService   : poc.java.service.CountDownLatchService: main service starts
+Service serviceB has been started
+Service serviceA has been started
+Service serviceC has been started
+2019-08-26 15:21:43.525  INFO 2208 --- [           main] poc.java.service.CountDownLatchService   : poc.java.service.CountDownLatchService: main service ends
+
+----------=----------
+RUN 2
+
+2019-08-26 15:28:05.855  INFO 15040 --- [           main] rentApp$$EnhancerBySpringCGLIB$$46bb3a78 : run service
+2019-08-26 15:28:05.855  INFO 15040 --- [           main] poc.java.service.ConcurrentService       : main service
+2019-08-26 15:28:05.855  INFO 15040 --- [           main] poc.java.service.CountDownLatchService   : poc.java.service.CountDownLatchService: main service starts
+2019-08-26 15:28:06.356  INFO 15040 --- [       Thread-5] poc.java.service.CountDownLatchService   : Service serviceB has been started
+2019-08-26 15:28:06.856  INFO 15040 --- [       Thread-4] poc.java.service.CountDownLatchService   : Service serviceA has been started
+2019-08-26 15:28:07.356  INFO 15040 --- [       Thread-6] poc.java.service.CountDownLatchService   : Service serviceC has been started
+2019-08-26 15:28:07.356  INFO 15040 --- [           main] poc.java.service.CountDownLatchService   : poc.java.service.CountDownLatchService: main service ends
+
+----------=----------
