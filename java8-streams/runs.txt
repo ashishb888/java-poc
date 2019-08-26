@@ -1,0 +1,29 @@
+FunctionalService
+
+RUN 1
+
+2019-08-26 19:52:12.455  INFO 7072 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$320fb3da : run service
+2019-08-26 19:52:12.456  INFO 7072 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-26 19:52:12.456  INFO 7072 --- [           main] poc.java.service.FunctionalService       : poc.java.service.FunctionalService: main service
+2019-08-26 19:52:12.456  INFO 7072 --- [           main] poc.java.service.FunctionalService       : arithmetic service
+2019-08-26 19:52:12.457  INFO 7072 --- [           main] poc.java.service.FunctionalService       : add: 30
+2019-08-26 19:52:12.459  INFO 7072 --- [           main] poc.java.service.FunctionalService       : substract: -10
+2019-08-26 19:52:12.459  INFO 7072 --- [           main] poc.java.service.FunctionalService       : division: 0
+2019-08-26 19:52:12.459  INFO 7072 --- [           main] poc.java.service.FunctionalService       : multiplication: 200
+2019-08-26 19:52:12.459  INFO 7072 --- [           main] poc.java.service.FunctionalService       : mod: 10
+
+----------=----------
+RUN 2
+
+2019-08-26 19:59:27.443  INFO 13300 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$53457ab5 : run service
+2019-08-26 19:59:27.443  INFO 13300 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-26 19:59:27.444  INFO 13300 --- [           main] poc.java.service.FunctionalService       : poc.java.service.FunctionalService: main service
+2019-08-26 19:59:27.445  INFO 13300 --- [           main] poc.java.service.FunctionalService       : arithmetic service
+2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : add: 30
+2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : substract: -10
+2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : division: 0
+2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : multiplication: 200
+2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : mod: 10
+2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : helloStatic: Hello, Ashish
+
+----------=----------

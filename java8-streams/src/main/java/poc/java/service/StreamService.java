@@ -20,6 +20,8 @@ public class StreamService {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private StreamsRepository streamsRepository;
+	@Autowired
+	private FunctionalService functionalService;
 
 	private void m1() {
 		logger.info("m1 service");
@@ -33,8 +35,9 @@ public class StreamService {
 	}
 
 	public void main() {
-		logger.info("main service");
+		logger.info(this.getClass().getName() + ": main service");
 
-		m1();
+		// m1();
+		functionalService.main();
 	}
 }
