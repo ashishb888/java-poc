@@ -17,7 +17,7 @@ import poc.java.service.DesignPatternService;
 public class DesignPatternApp implements CommandLineRunner {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
-	private DesignPatternService concurrentService;
+	private DesignPatternService designPatternService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DesignPatternApp.class, args);
@@ -27,7 +27,7 @@ public class DesignPatternApp implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		logger.info("run service");
 
-		concurrentService.main();
+		designPatternService.main();
 	}
 
 }
