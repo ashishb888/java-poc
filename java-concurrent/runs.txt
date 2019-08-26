@@ -19,4 +19,18 @@ RUN 2
 2019-08-26 15:28:07.356  INFO 15040 --- [       Thread-6] poc.java.service.CountDownLatchService   : Service serviceC has been started
 2019-08-26 15:28:07.356  INFO 15040 --- [           main] poc.java.service.CountDownLatchService   : poc.java.service.CountDownLatchService: main service ends
 
-----------=----------
+----------==----------
+CyclicBarrierService
+
+RUN 1
+
+2019-08-26 16:02:35.219  INFO 20884 --- [           main] poc.java.service.ConcurrentService       : main service
+2019-08-26 16:02:35.219  INFO 20884 --- [           main] poc.java.service.CyclicBarrierService    : poc.java.service.CyclicBarrierService: main service starts
+2019-08-26 16:02:35.221  INFO 20884 --- [           main] poc.java.service.CyclicBarrierService    : poc.java.service.CyclicBarrierService: main service ends
+2019-08-26 16:02:35.721  INFO 20884 --- [       serviceB] poc.java.service.CyclicBarrierService    : Service serviceB is preparing to start
+2019-08-26 16:02:36.222  INFO 20884 --- [       serviceA] poc.java.service.CyclicBarrierService    : Service serviceA is preparing to start
+2019-08-26 16:02:36.721  INFO 20884 --- [       serviceC] poc.java.service.CyclicBarrierService    : Service serviceC is preparing to start
+2019-08-26 16:02:36.721  INFO 20884 --- [       serviceC] poc.java.service.CyclicBarrierService    : All services crossed barrier
+2019-08-26 16:02:36.721  INFO 20884 --- [       serviceA] poc.java.service.CyclicBarrierService    : Service serviceA has been started
+2019-08-26 16:02:36.721  INFO 20884 --- [       serviceB] poc.java.service.CyclicBarrierService    : Service serviceB has been started
+2019-08-26 16:02:36.721  INFO 20884 --- [       serviceC] poc.java.service.CyclicBarrierService    : Service serviceC has been started

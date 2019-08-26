@@ -14,10 +14,13 @@ public class ConcurrentService {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
 	private CountDownLatchService cdLatchService;
+	@Autowired
+	private CyclicBarrierService cyclicBarrierService;
 
 	public void main() {
 		logger.info("main service");
 
-		cdLatchService.main();
+		// cdLatchService.main();
+		cyclicBarrierService.main();
 	}
 }
