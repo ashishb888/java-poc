@@ -48,3 +48,20 @@ RUN 1
 2019-08-27 15:08:26.066  INFO 3632 --- [             T1] poc.java.service.ThreadService           : Thread: T1
 2019-08-27 15:08:26.067  INFO 3632 --- [             T2] poc.java.service.ThreadService           : Thread: T2
 2019-08-27 15:08:26.067  INFO 3632 --- [             T3] poc.java.service.ThreadService           : Thread: T3
+
+----------==----------
+ThreadService withSleep() & withoutSleep()
+
+RUN 1
+
+2019-08-27 18:28:29.452  INFO 13952 --- [           main] rentApp$$EnhancerBySpringCGLIB$$9f217668 : run service
+2019-08-27 18:28:29.452  INFO 13952 --- [           main] poc.java.service.ConcurrentService       : main service
+2019-08-27 18:28:29.452  INFO 13952 --- [           main] poc.java.service.ThreadService           : poc.java.service.ThreadService: main service starts
+2019-08-27 18:28:29.452  INFO 13952 --- [           main] poc.java.service.ThreadService           : withoutSleep service
+2019-08-27 18:28:29.453  INFO 13952 --- [  without-sleep] poc.java.service.ThreadService           : without-sleep running
+2019-08-27 18:28:31.453  INFO 13952 --- [  without-sleep] poc.java.service.ThreadService           : without-sleep finished
+2019-08-27 18:28:31.453  INFO 13952 --- [           main] poc.java.service.ThreadService           : withSleep service
+2019-08-27 18:28:31.453  INFO 13952 --- [           main] poc.java.service.ThreadService           : withoutSleep service
+2019-08-27 18:28:31.453  INFO 13952 --- [     with-sleep] poc.java.service.ThreadService           : with-sleep running
+2019-08-27 18:28:33.454  INFO 13952 --- [     with-sleep] poc.java.service.ThreadService           : with-sleep finished
+2019-08-27 18:28:33.454  INFO 13952 --- [           main] poc.java.service.ThreadService           : poc.java.service.ThreadService: main service ends
