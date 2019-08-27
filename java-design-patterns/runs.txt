@@ -29,3 +29,20 @@ RUN 1
 2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-9] poc.java.service.SingletonService        : pool-1-thread-9: singleton: poc.java.domain.Singleton@1146d39c
 2019-08-27 16:10:29.741  INFO 2684 --- [ool-1-thread-10] poc.java.service.SingletonService        : pool-1-thread-10: singleton: poc.java.domain.Singleton@1146d39c
 2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-2] poc.java.service.SingletonService        : pool-1-thread-2: singleton: poc.java.domain.Singleton@1146d39c
+
+----------==----------
+PrototypeService
+
+RUN 1
+
+2019-08-27 17:29:07.228  INFO 10348 --- [           main] tternApp$$EnhancerBySpringCGLIB$$5d9f3c5 : run service
+2019-08-27 17:29:07.229  INFO 10348 --- [           main] poc.java.service.DesignPatternService    : main service starts
+2019-08-27 17:29:07.229  INFO 10348 --- [           main] poc.java.service.PrototypeService        : main service starts
+2019-08-27 17:29:07.229  INFO 10348 --- [           main] poc.java.service.PrototypeService        : prototype service
+2019-08-27 17:29:07.231  INFO 10348 --- [           main] poc.java.service.PrototypeService        : p1: PrototypeImpl1(name=PT1, td=TestDomain(name=PT1, age=10))
+2019-08-27 17:29:07.233  INFO 10348 --- [           main] poc.java.service.PrototypeService        : p2: PrototypeImpl2(name=PT2, td=TestDomain(name=PT2, age=20))
+2019-08-27 17:29:07.233  INFO 10348 --- [           main] poc.java.service.PrototypeService        : p1: PrototypeImpl1(name=PT1, td=TestDomain(name=p1Clone, age=10))
+2019-08-27 17:29:07.233  INFO 10348 --- [           main] poc.java.service.PrototypeService        : p1Clone: PrototypeImpl1(name=p1Clone, td=TestDomain(name=p1Clone, age=10))
+2019-08-27 17:29:07.233  INFO 10348 --- [           main] poc.java.service.PrototypeService        : p2Clone: PrototypeImpl2(name=PT2, td=TestDomain(name=PT2, age=20))
+2019-08-27 17:29:07.233  INFO 10348 --- [           main] poc.java.service.PrototypeService        : main service ends
+2019-08-27 17:29:07.233  INFO 10348 --- [           main] poc.java.service.DesignPatternService    : main service ends

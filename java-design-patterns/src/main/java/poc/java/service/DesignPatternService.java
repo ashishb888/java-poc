@@ -17,12 +17,15 @@ public class DesignPatternService {
 	private BuilderService builderService;
 	@Autowired
 	private SingletonService singletonService;
+	@Autowired
+	private PrototypeService prototypeService;
 
 	public void main() {
 		log.info("main service starts");
 
 		// builderService.main();
-		singletonService.main();
+		// singletonService.main();
+		prototypeService.main();
 
 		log.info("main service ends");
 	}
