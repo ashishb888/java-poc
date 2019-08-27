@@ -1,23 +1,29 @@
 package poc.java.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import lombok.extern.java.Log;
 
 /**
  * @author ashishb888
  */
 
 @Service
+@Log
 public class DesignPatternService {
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private BuilderService builderService;
+	@Autowired
+	private SingletonService singletonService;
 
 	public void main() {
-		logger.info("main service");
+		log.info("main service starts");
 
-		builderService.main();
+		// builderService.main();
+		singletonService.main();
+
+		log.info("main service ends");
 	}
 }

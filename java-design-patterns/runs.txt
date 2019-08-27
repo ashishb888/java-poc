@@ -8,4 +8,24 @@ RUN 1
 2019-08-26 19:19:53.052  INFO 11956 --- [           main] poc.java.service.BuilderService          : lombokBuilder service
 2019-08-26 19:19:53.056  INFO 11956 --- [           main] poc.java.service.BuilderService          : empA: Employee(name=A, age=18, salary=0.0, department=IT, gender=MALE)
 
-----------=----------
+----------==----------
+SingletonService
+
+RUN 1
+
+2019-08-27 16:10:29.722  INFO 2684 --- [           main] ternApp$$EnhancerBySpringCGLIB$$184357ec : run service
+2019-08-27 16:10:29.722  INFO 2684 --- [           main] poc.java.service.DesignPatternService    : poc.java.service.DesignPatternService: main service starts
+2019-08-27 16:10:29.722  INFO 2684 --- [           main] poc.java.service.SingletonService        : poc.java.service.SingletonService: main service starts
+2019-08-27 16:10:29.724  INFO 2684 --- [           main] poc.java.service.SingletonService        : singleton service
+2019-08-27 16:10:29.739  INFO 2684 --- [           main] poc.java.service.SingletonService        : poc.java.service.SingletonService: main service ends
+2019-08-27 16:10:29.740  INFO 2684 --- [pool-1-thread-5] poc.java.service.SingletonService        : pool-1-thread-5: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.740  INFO 2684 --- [pool-1-thread-4] poc.java.service.SingletonService        : pool-1-thread-4: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.740  INFO 2684 --- [pool-1-thread-3] poc.java.service.SingletonService        : pool-1-thread-3: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-1] poc.java.service.SingletonService        : pool-1-thread-1: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-7] poc.java.service.SingletonService        : pool-1-thread-7: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-6] poc.java.service.SingletonService        : pool-1-thread-6: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-8] poc.java.service.SingletonService        : pool-1-thread-8: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.739  INFO 2684 --- [           main] poc.java.service.DesignPatternService    : poc.java.service.DesignPatternService: main service ends
+2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-9] poc.java.service.SingletonService        : pool-1-thread-9: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.741  INFO 2684 --- [ool-1-thread-10] poc.java.service.SingletonService        : pool-1-thread-10: singleton: poc.java.domain.Singleton@1146d39c
+2019-08-27 16:10:29.741  INFO 2684 --- [pool-1-thread-2] poc.java.service.SingletonService        : pool-1-thread-2: singleton: poc.java.domain.Singleton@1146d39c
