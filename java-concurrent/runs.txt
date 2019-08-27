@@ -34,3 +34,17 @@ RUN 1
 2019-08-26 16:02:36.721  INFO 20884 --- [       serviceA] poc.java.service.CyclicBarrierService    : Service serviceA has been started
 2019-08-26 16:02:36.721  INFO 20884 --- [       serviceB] poc.java.service.CyclicBarrierService    : Service serviceB has been started
 2019-08-26 16:02:36.721  INFO 20884 --- [       serviceC] poc.java.service.CyclicBarrierService    : Service serviceC has been started
+
+----------==----------
+ThreadService join()
+
+RUN 1
+
+2019-08-27 15:08:26.061  INFO 3632 --- [           main] rentApp$$EnhancerBySpringCGLIB$$c9c4e868 : run service
+2019-08-27 15:08:26.062  INFO 3632 --- [           main] poc.java.service.ConcurrentService       : main service
+2019-08-27 15:08:26.062  INFO 3632 --- [           main] poc.java.service.ThreadService           : poc.java.service.ThreadService: main service starts
+2019-08-27 15:08:26.063  INFO 3632 --- [           main] poc.java.service.ThreadService           : join service
+2019-08-27 15:08:26.065  INFO 3632 --- [           main] poc.java.service.ThreadService           : poc.java.service.ThreadService: main service ends
+2019-08-27 15:08:26.066  INFO 3632 --- [             T1] poc.java.service.ThreadService           : Thread: T1
+2019-08-27 15:08:26.067  INFO 3632 --- [             T2] poc.java.service.ThreadService           : Thread: T2
+2019-08-27 15:08:26.067  INFO 3632 --- [             T3] poc.java.service.ThreadService           : Thread: T3

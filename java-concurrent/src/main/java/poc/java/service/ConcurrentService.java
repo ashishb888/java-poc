@@ -16,11 +16,14 @@ public class ConcurrentService {
 	private CountDownLatchService cdLatchService;
 	@Autowired
 	private CyclicBarrierService cyclicBarrierService;
+	@Autowired
+	private ThreadService threadService;
 
 	public void main() {
 		logger.info("main service");
 
 		// cdLatchService.main();
-		cyclicBarrierService.main();
+		// cyclicBarrierService.main();
+		threadService.main();
 	}
 }
