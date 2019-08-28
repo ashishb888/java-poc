@@ -40,3 +40,63 @@ RUN 3
 2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : mod: 10
 2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : helloStatic: Hello, Ashish
 2019-08-28 13:12:21.472  INFO 22164 --- [           main] poc.java.service.FunctionalService       : helloDefault: Hello, Ashish
+
+----------==----------
+PSStreamService
+
+RUN 1 parallel
+
+2019-08-28 15:07:12.058  INFO 17120 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$55ff984c : run service
+2019-08-28 15:07:12.058  INFO 17120 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-28 15:07:12.058  INFO 17120 --- [           main] poc.java.service.PSStreamService         : poc.java.service.PSStreamService: main service
+2019-08-28 15:07:12.058  INFO 17120 --- [           main] poc.java.service.PSStreamService         : parallel service
+2019-08-28 15:07:12.062  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 3
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 5
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 4
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 2
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 1
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.064  INFO 17120 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.063  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 9
+2019-08-28 15:07:12.064  INFO 17120 --- [           main] poc.java.service.PSStreamService         : e: 7
+2019-08-28 15:07:12.064  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.064  INFO 17120 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.064  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 10
+2019-08-28 15:07:12.064  INFO 17120 --- [           main] poc.java.service.PSStreamService         : e: 6
+2019-08-28 15:07:12.064  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : transform
+2019-08-28 15:07:12.064  INFO 17120 --- [onPool-worker-1] poc.java.service.PSStreamService         : e: 8
+
+----------=----------
+RUN 2 sequential
+
+2019-08-28 15:09:18.651  INFO 3764 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$695d940e : run service
+2019-08-28 15:09:18.651  INFO 3764 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-28 15:09:18.652  INFO 3764 --- [           main] poc.java.service.PSStreamService         : poc.java.service.PSStreamService: main service
+2019-08-28 15:09:18.652  INFO 3764 --- [           main] poc.java.service.PSStreamService         : sequential service
+2019-08-28 15:09:18.653  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 1
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 2
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 3
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 4
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 5
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 6
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 7
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.655  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 8
+2019-08-28 15:09:18.656  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.656  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 9
+2019-08-28 15:09:18.656  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
+2019-08-28 15:09:18.656  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 10
+
+

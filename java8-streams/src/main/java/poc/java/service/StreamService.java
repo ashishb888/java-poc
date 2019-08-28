@@ -22,6 +22,8 @@ public class StreamService {
 	private StreamsRepository streamsRepository;
 	@Autowired
 	private FunctionalService functionalService;
+	@Autowired
+	private PSStreamService psService;
 
 	private void m1() {
 		logger.info("m1 service");
@@ -38,6 +40,7 @@ public class StreamService {
 		logger.info(this.getClass().getName() + ": main service");
 
 		// m1();
-		functionalService.main();
+		// functionalService.main();
+		psService.main();
 	}
 }
