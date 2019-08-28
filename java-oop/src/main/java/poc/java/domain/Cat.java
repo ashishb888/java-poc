@@ -12,4 +12,8 @@ public class Cat extends Animal {
 		log.info("The instance method in Cat");
 	}
 
+	public void m1() {
+		log.info("Cat: m1");
+	}
+
 }

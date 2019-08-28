@@ -15,6 +15,7 @@ public class InheritanceService {
 
 		Animal myAnimal = new Cat();
 		myAnimal.testInstanceMethod();
+		((Cat) myAnimal).m1();
 
 		Animal.testClassMethod();
 		Cat.testClassMethod();
