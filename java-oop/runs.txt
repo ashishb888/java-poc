@@ -1,0 +1,17 @@
+InheritanceService
+
+RUN 1
+
+2019-08-28 12:40:26.014  INFO 2236 --- [           main] .OopApp$$EnhancerBySpringCGLIB$$5708930c : run service
+2019-08-28 12:40:26.015  INFO 2236 --- [           main] poc.java.service.OopService              : poc.java.service.OopService: main service
+2019-08-28 12:40:26.015  INFO 2236 --- [           main] poc.java.service.InheritanceService      : poc.java.service.InheritanceService: main service
+2019-08-28 12:40:26.015  INFO 2236 --- [           main] poc.java.service.InheritanceService      : inheritance service
+2019-08-28 12:40:26.017  INFO 2236 --- [           main] poc.java.domain.Cat                      : The instance method in Cat
+2019-08-28 12:40:26.018  INFO 2236 --- [           main] poc.java.domain.Animal                   : The static method in Animal
+2019-08-28 12:40:26.018  INFO 2236 --- [           main] poc.java.domain.Cat                      : Cat: m1
+2019-08-28 12:40:26.018  INFO 2236 --- [           main] poc.java.domain.Animal                   : The static method in Animal
+2019-08-28 12:40:26.018  INFO 2236 --- [           main] poc.java.domain.Cat                      : The static method in Cat
+2019-08-28 12:40:26.018  INFO 2236 --- [           main] poc.java.domain.Animal                   : The instance method in Animal
+2019-08-28 12:40:26.018  INFO 2236 --- [           main] poc.java.domain.Animal                   : The static method in Animal
+
+----------==----------

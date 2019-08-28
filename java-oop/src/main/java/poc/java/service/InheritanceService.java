@@ -15,10 +15,15 @@ public class InheritanceService {
 
 		Animal myAnimal = new Cat();
 		myAnimal.testInstanceMethod();
+		myAnimal.testClassMethod();
 		((Cat) myAnimal).m1();
 
 		Animal.testClassMethod();
 		Cat.testClassMethod();
+
+		Animal a = new Animal();
+		a.testInstanceMethod();
+		a.testClassMethod();
 	}
 
 	public void main() {
