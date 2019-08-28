@@ -27,3 +27,16 @@ RUN 2
 2019-08-26 19:59:27.447  INFO 13300 --- [           main] poc.java.service.FunctionalService       : helloStatic: Hello, Ashish
 
 ----------=----------
+RUN 3
+
+2019-08-28 13:12:21.467  INFO 22164 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$c1074364 : run service
+2019-08-28 13:12:21.467  INFO 22164 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-28 13:12:21.467  INFO 22164 --- [           main] poc.java.service.FunctionalService       : poc.java.service.FunctionalService: main service
+2019-08-28 13:12:21.468  INFO 22164 --- [           main] poc.java.service.FunctionalService       : arithmetic service
+2019-08-28 13:12:21.469  INFO 22164 --- [           main] poc.java.service.FunctionalService       : add: 30
+2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : substract: -10
+2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : division: 0
+2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : multiplication: 200
+2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : mod: 10
+2019-08-28 13:12:21.471  INFO 22164 --- [           main] poc.java.service.FunctionalService       : helloStatic: Hello, Ashish
+2019-08-28 13:12:21.472  INFO 22164 --- [           main] poc.java.service.FunctionalService       : helloDefault: Hello, Ashish
