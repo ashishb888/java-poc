@@ -99,4 +99,33 @@ RUN 2 sequential
 2019-08-28 15:09:18.656  INFO 3764 --- [           main] poc.java.service.PSStreamService         : transform
 2019-08-28 15:09:18.656  INFO 3764 --- [           main] poc.java.service.PSStreamService         : e: 10
 
+----------=----------
+RUN 3 parallel
+
+2019-08-29 18:09:25.307  INFO 20836 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$960b9c2f : run service
+2019-08-29 18:09:25.307  INFO 20836 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-29 18:09:25.307  INFO 20836 --- [           main] poc.java.service.PSStreamService         : poc.java.service.PSStreamService: main service
+2019-08-29 18:09:25.309  INFO 20836 --- [           main] poc.java.service.PSStreamService         : parallel service
+2019-08-29 18:09:25.324  INFO 20836 --- [           main] poc.java.service.PSStreamService         : min: 1
+2019-08-29 18:09:25.324  INFO 20836 --- [           main] poc.java.service.PSStreamService         : max: 10
+2019-08-29 18:09:25.325  INFO 20836 --- [           main] poc.java.service.PSStreamService         : sum: 55
+2019-08-29 18:09:25.325  INFO 20836 --- [           main] poc.java.service.PSStreamService         : first: 1
+2019-08-29 18:09:25.326  INFO 20836 --- [           main] poc.java.service.PSStreamService         : last: 10
+2019-08-29 18:09:25.332  INFO 20836 --- [           main] poc.java.service.PSStreamService         : last: 10
+
+----------=----------
+RUN 4 sequential
+
+2019-08-29 18:10:47.725  INFO 18292 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$572ccb18 : run service
+2019-08-29 18:10:47.725  INFO 18292 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-29 18:10:47.725  INFO 18292 --- [           main] poc.java.service.PSStreamService         : poc.java.service.PSStreamService: main service
+2019-08-29 18:10:47.725  INFO 18292 --- [           main] poc.java.service.PSStreamService         : sequential service
+2019-08-29 18:10:47.728  INFO 18292 --- [           main] poc.java.service.PSStreamService         : min: 1
+2019-08-29 18:10:47.729  INFO 18292 --- [           main] poc.java.service.PSStreamService         : max: 10
+2019-08-29 18:10:47.730  INFO 18292 --- [           main] poc.java.service.PSStreamService         : sum: 55
+2019-08-29 18:10:47.730  INFO 18292 --- [           main] poc.java.service.PSStreamService         : first: 1
+2019-08-29 18:10:47.730  INFO 18292 --- [           main] poc.java.service.PSStreamService         : last: 10
+2019-08-29 18:10:47.732  INFO 18292 --- [           main] poc.java.service.PSStreamService         : last: 10
+
+
 
