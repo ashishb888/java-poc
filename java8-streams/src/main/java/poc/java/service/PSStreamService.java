@@ -26,7 +26,25 @@ public class PSStreamService {
 		List<Integer> numbers = IntStream.iterate(1, i -> i + 1).limit(10).boxed().collect(Collectors.toList());
 
 		// numbers.stream().forEach(System.out::println);
-		numbers.stream().map(e -> transform(e)).forEach(e -> log.info("e: " + e));
+		numbers.stream().map(e -> transform(e));// .forEach(e -> log.info("e: " + e));
+
+		int min = numbers.stream().mapToInt(i -> i).min().getAsInt();
+		log.info("min: " + min);
+
+		int max = numbers.stream().mapToInt(i -> i).max().getAsInt();
+		log.info("max: " + max);
+
+		int sum = numbers.stream().mapToInt(i -> i).sum();
+		log.info("sum: " + sum);
+
+		int first = numbers.stream().findFirst().get();
+		log.info("first: " + first);
+
+		int last = numbers.stream().reduce((f, s) -> s).get();
+		log.info("last: " + last);
+
+		last = numbers.stream().skip(numbers.stream().count() - 1).findFirst().get();
+		log.info("last: " + last);
 	}
 
 	private void parallel() {
