@@ -16,6 +16,7 @@ import poc.java.repos.StreamsRepository;
  */
 
 @Service
+@SuppressWarnings(value = "unused")
 public class StreamService {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired

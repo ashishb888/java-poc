@@ -10,6 +10,7 @@ import lombok.extern.java.Log;
 
 @Service
 @Log
+@SuppressWarnings(value = "unused")
 public class PSStreamService {
 
 	private int transform(int i) {

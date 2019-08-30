@@ -8,6 +8,7 @@ import poc.java.domain.ArithmeticImpl;
 
 @Service
 @Log
+@SuppressWarnings(value = "unused")
 public class FunctionalService {
 
 	private void arithmetic() {

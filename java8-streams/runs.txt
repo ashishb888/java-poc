@@ -230,6 +230,7 @@ RUN 6 sortByNameAndAgeAndSalary
 
 ----------=----------
 RUN 7 sortBySalaryReversed
+
 2019-08-30 12:46:55.538  INFO 19784 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$53457ab5 : run service
 2019-08-30 12:46:55.538  INFO 19784 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
 2019-08-30 12:46:55.538  INFO 19784 --- [           main] poc.java.service.ComparatorService       : poc.java.service.ComparatorService: main service

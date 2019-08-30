@@ -12,6 +12,7 @@ import poc.java.repos.StreamsRepository;
 
 @Service
 @Log
+@SuppressWarnings(value = "unused")
 public class ComparatorService {
 	@Autowired
 	private StreamsRepository sr;
