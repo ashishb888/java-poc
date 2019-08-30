@@ -80,8 +80,8 @@ public class PSStreamService {
 	public void main() {
 		log.info(this.getClass().getName() + ": main service");
 
-		sequential();
-		// parallel();
+		// sequential();
+		parallel();
 
 	}
 }

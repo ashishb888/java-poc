@@ -127,5 +127,18 @@ RUN 4 sequential
 2019-08-29 18:10:47.730  INFO 18292 --- [           main] poc.java.service.PSStreamService         : last: 10
 2019-08-29 18:10:47.732  INFO 18292 --- [           main] poc.java.service.PSStreamService         : last: 10
 
+----------==----------
+ComparatorService
+
+RUN 1 sortByAge
+
+2019-08-29 19:56:59.706  INFO 17448 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$530a45b8 : run service
+2019-08-29 19:56:59.706  INFO 17448 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-29 19:56:59.707  INFO 17448 --- [           main] poc.java.service.ComparatorService       : poc.java.service.ComparatorService: main service
+2019-08-29 19:56:59.707  INFO 17448 --- [           main] poc.java.service.ComparatorService       : sort service
+2019-08-29 19:56:59.708  INFO 17448 --- [           main] poc.java.service.ComparatorService       : before sort employees: [Employee(name=A, age=28, salary=8000.0, department=IT, gender=MALE), Employee(name=A, age=20, salary=10000.0, department=TESTING, gender=FEMALE), Employee(name=X, age=38, salary=8000.0, department=IT, gender=MALE), Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE)]
+2019-08-29 19:56:59.708  INFO 17448 --- [           main] poc.java.service.ComparatorService       : sortByAge service
+2019-08-29 19:56:59.709  INFO 17448 --- [           main] poc.java.service.ComparatorService       : after sort employees: [Employee(name=A, age=20, salary=10000.0, department=TESTING, gender=FEMALE), Employee(name=A, age=28, salary=8000.0, department=IT, gender=MALE), Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE), Employee(name=X, age=38, salary=8000.0, department=IT, gender=MALE)]
+
 
 

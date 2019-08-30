@@ -24,11 +24,13 @@ public class StreamService {
 	private FunctionalService functionalService;
 	@Autowired
 	private PSStreamService psService;
+	@Autowired
+	private ComparatorService cs;
 
 	private void m1() {
 		logger.info("m1 service");
 
-		List<Employee> employees = streamsRepository.getAll();
+		List<Employee> employees = streamsRepository.getAll(5);
 		employees.stream().forEach(System.out::println);
 
 		List<Employee> ageGreater30 = employees.stream().filter(e -> e.getAge() > 30).collect(Collectors.toList());
@@ -41,6 +43,7 @@ public class StreamService {
 
 		// m1();
 		// functionalService.main();
-		psService.main();
+		// psService.main();
+		cs.main();
 	}
 }
