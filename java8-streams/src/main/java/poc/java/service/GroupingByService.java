@@ -29,12 +29,23 @@ public class GroupingByService {
 		});
 	}
 
+	private void groupingByNameAndCount(List<Fruit> fruits) {
+		log.info("groupingByNameAndCount service");
+
+		Map<String, Long> countByName = fruits.stream()
+				.collect(Collectors.groupingBy(Fruit::getName, Collectors.counting()));
+
+		log.info("countByName: " + countByName);
+	}
+
 	private void groupingBy() {
 		log.info("groupingBy service");
 
 		List<Fruit> fruits = fs.getAll(5);
+		log.info("fruits: " + fruits);
 
-		groupingByName(fruits);
+		// groupingByName(fruits);
+		groupingByNameAndCount(fruits);
 	}
 
 	public void main() {

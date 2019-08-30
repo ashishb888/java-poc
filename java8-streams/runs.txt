@@ -262,3 +262,14 @@ RUN 1 groupByName
 2019-08-30 15:21:06.825  INFO 21428 --- [           main] poc.java.service.GroupingByService       : k: apple, v: [Fruit(name=apple, price=100.0, quantity=10), Fruit(name=apple, price=50.0, quantity=5)]
 2019-08-30 15:21:06.825  INFO 21428 --- [           main] poc.java.service.GroupingByService       : k: pear, v: [Fruit(name=pear, price=160.0, quantity=13), Fruit(name=pear, price=160.0, quantity=13)]
 
+----------=----------
+RUN 2 groupingByNameAndCount
+
+2019-08-30 15:35:52.233  INFO 17952 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$c8608a20 : run service
+2019-08-30 15:35:52.233  INFO 17952 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-30 15:35:52.234  INFO 17952 --- [           main] poc.java.service.GroupingByService       : poc.java.service.GroupingByService: main service
+2019-08-30 15:35:52.234  INFO 17952 --- [           main] poc.java.service.GroupingByService       : groupingBy service
+2019-08-30 15:35:52.236  INFO 17952 --- [           main] poc.java.service.GroupingByService       : fruits: [Fruit(name=apple, price=100.0, quantity=10), Fruit(name=banana, price=100.0, quantity=20), Fruit(name=pear, price=160.0, quantity=13), Fruit(name=apple, price=50.0, quantity=5), Fruit(name=pear, price=160.0, quantity=13)]
+2019-08-30 15:35:52.236  INFO 17952 --- [           main] poc.java.service.GroupingByService       : groupingByNameAndCount service
+2019-08-30 15:35:52.239  INFO 17952 --- [           main] poc.java.service.GroupingByService       : countByName: {banana=1, apple=2, pear=2}
+
