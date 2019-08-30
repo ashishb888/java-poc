@@ -31,6 +31,8 @@ public class StreamService {
 	private GroupingByService gs;
 	@Autowired
 	private JoiningService js;
+	@Autowired
+	private SummarizingService ss;
 
 	private void m1() {
 		logger.info("m1 service");
@@ -51,6 +53,7 @@ public class StreamService {
 		// psService.main();
 		// cs.main();
 		// gs.main();
-		js.main();
+		// js.main();
+		ss.main();
 	}
 }

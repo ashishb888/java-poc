@@ -325,3 +325,18 @@ RUN 1
 2019-08-30 17:45:01.075  INFO 11868 --- [           main] poc.java.service.JoiningService          : result: apple, banana, pear, watermelon
 2019-08-30 17:45:01.075  INFO 11868 --- [           main] poc.java.service.JoiningService          : joiningPreSuf service
 2019-08-30 17:45:01.075  INFO 11868 --- [           main] poc.java.service.JoiningService          : result: START-----apple banana pear watermelon-----END
+
+----------==----------
+SummarizingService
+
+RUN 1
+
+2019-08-30 18:00:04.380  INFO 21104 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$695d940e : run service
+2019-08-30 18:00:04.380  INFO 21104 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-30 18:00:04.381  INFO 21104 --- [           main] poc.java.service.SummarizingService      : main service
+2019-08-30 18:00:04.382  INFO 21104 --- [           main] poc.java.service.SummarizingService      : summarize service
+2019-08-30 18:00:04.383  INFO 21104 --- [           main] poc.java.service.SummarizingService      : strings: [apple, banana, pear, watermelon, orage, pineaple, apple, banana, pear, watermelon]
+2019-08-30 18:00:04.383  INFO 21104 --- [           main] poc.java.service.SummarizingService      : summarizingInt service
+2019-08-30 18:00:04.385  INFO 21104 --- [           main] poc.java.service.SummarizingService      : result: IntSummaryStatistics{count=10, sum=63, min=4, average=6.300000, max=10}
+2019-08-30 18:00:04.385  INFO 21104 --- [           main] poc.java.service.SummarizingService      : summarizingDouble service
+2019-08-30 18:00:04.386  INFO 21104 --- [           main] poc.java.service.SummarizingService      : result: DoubleSummaryStatistics{count=10, sum=63.000000, min=4.000000, average=6.300000, max=10.000000}
