@@ -15,12 +15,12 @@ public class StreamsRepository {
 	public List<Employee> getAll(int limit) {
 
 		List<Employee> employees = Arrays.asList(new Employee("A", 28, 8000, "IT", Gender.MALE),
-				new Employee("A", 20, 10000, "TESTING", Gender.FEMALE), new Employee("X", 38, 8000, "IT", Gender.MALE),
+				new Employee("A", 20, 10000, "TESTING", Gender.FEMALE), new Employee("X", 38, 80000, "IT", Gender.MALE),
 				new Employee("B", 28, 18000, "IT", Gender.MALE), new Employee("P", 80, 20000, "IT", Gender.FEMALE),
-				new Employee("C", 48, 8000, "IT", Gender.MALE), new Employee("Y", 25, 80000, "QA", Gender.MALE),
+				new Employee("C", 48, 3500, "IT", Gender.MALE), new Employee("Y", 25, 80000, "QA", Gender.MALE),
 				new Employee("A", 50, 8000, "IT", Gender.MALE), new Employee("A", 29, 9000, "IT", Gender.MALE),
 				new Employee("A", 40, 25000, "IT", Gender.FEMALE), new Employee("A", 28, 30000, "QA", Gender.MALE),
-				new Employee("C", 28, 8000, "IT", Gender.FEMALE), new Employee("Z", 60, 45000, "IT", Gender.MALE));
+				new Employee("C", 28, 22000, "IT", Gender.FEMALE), new Employee("Z", 60, 45000, "IT", Gender.MALE));
 
 		return employees.stream().limit(limit).collect(Collectors.toList());
 	}

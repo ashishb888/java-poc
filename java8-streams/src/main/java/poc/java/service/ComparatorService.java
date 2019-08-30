@@ -28,17 +28,32 @@ public class ComparatorService {
 		employees.sort((Employee e1, Employee e2) -> e1.getName().compareTo(e2.getName()));
 	}
 
+	private void sortBySalary(List<Employee> employees) {
+		log.info("sortBySalary service");
+
+		employees.sort((Employee e1, Employee e2) -> Double.compare(e1.getSalary(), (e2.getSalary())));
+	}
+
 	private void sort() {
 		log.info("sort service");
 
 		List<Employee> employees = sr.getAll(4);
 
-		log.info("before sort employees: " + employees);
+		log.info("before sort employees: ");
 
-		//sortByAge(employees);
-		sortByName(employees);
+		employees.forEach(e -> {
+			log.info("e: " + e);
+		});
 
-		log.info("after sort employees: " + employees);
+		// sortByAge(employees);
+		// sortByName(employees);
+		sortBySalary(employees);
+
+		log.info("after sort employees: ");
+
+		employees.forEach(e -> {
+			log.info("e: " + e);
+		});
 	}
 
 	private void compare() {
