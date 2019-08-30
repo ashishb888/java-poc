@@ -227,3 +227,21 @@ RUN 6 sortByNameAndAgeAndSalary
 2019-08-30 12:42:09.914  INFO 9104 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=A, age=28, salary=8000.0, department=IT, gender=MALE)
 2019-08-30 12:42:09.914  INFO 9104 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE)
 2019-08-30 12:42:09.914  INFO 9104 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=X, age=38, salary=80000.0, department=IT, gender=MALE)
+
+----------=----------
+RUN 7 sortBySalaryReversed
+2019-08-30 12:46:55.538  INFO 19784 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$53457ab5 : run service
+2019-08-30 12:46:55.538  INFO 19784 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-30 12:46:55.538  INFO 19784 --- [           main] poc.java.service.ComparatorService       : poc.java.service.ComparatorService: main service
+2019-08-30 12:46:55.539  INFO 19784 --- [           main] poc.java.service.ComparatorService       : sort service
+2019-08-30 12:46:55.542  INFO 19784 --- [           main] poc.java.service.ComparatorService       : before sort employees: 
+2019-08-30 12:46:55.542  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=A, age=28, salary=8000.0, department=IT, gender=MALE)
+2019-08-30 12:46:55.542  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=A, age=20, salary=10000.0, department=TESTING, gender=FEMALE)
+2019-08-30 12:46:55.542  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=X, age=38, salary=80000.0, department=IT, gender=MALE)
+2019-08-30 12:46:55.542  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE)
+2019-08-30 12:46:55.543  INFO 19784 --- [           main] poc.java.service.ComparatorService       : sortBySalaryReversed service
+2019-08-30 12:46:55.544  INFO 19784 --- [           main] poc.java.service.ComparatorService       : after sort employees: 
+2019-08-30 12:46:55.544  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=X, age=38, salary=80000.0, department=IT, gender=MALE)
+2019-08-30 12:46:55.544  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE)
+2019-08-30 12:46:55.544  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=A, age=20, salary=10000.0, department=TESTING, gender=FEMALE)
+2019-08-30 12:46:55.544  INFO 19784 --- [           main] poc.java.service.ComparatorService       : e: Employee(name=A, age=28, salary=8000.0, department=IT, gender=MALE)

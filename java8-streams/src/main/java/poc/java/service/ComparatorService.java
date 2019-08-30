@@ -53,6 +53,12 @@ public class ComparatorService {
 				.thenComparingDouble(Employee::getSalary));
 	}
 
+	private void sortBySalaryReversed(List<Employee> employees) {
+		log.info("sortBySalaryReversed service");
+
+		employees.sort(Comparator.comparingDouble(Employee::getSalary).reversed());
+	}
+
 	private void sort() {
 		log.info("sort service");
 
@@ -69,7 +75,8 @@ public class ComparatorService {
 		// csortBySalary(employees);
 		// sortByNameAndAge(employees);
 		// sortByNameAndSalary(employees);
-		sortByNameAndAgeAndSalary(employees);
+		// sortByNameAndAgeAndSalary(employees);
+		sortBySalaryReversed(employees);
 
 		log.info("after sort employees: ");
 
