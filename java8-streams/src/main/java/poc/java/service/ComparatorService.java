@@ -40,6 +40,12 @@ public class ComparatorService {
 		employees.sort(Comparator.comparing(Employee::getName).thenComparingInt(Employee::getAge));
 	}
 
+	private void sortByNameAndSalary(List<Employee> employees) {
+		log.info("sortByNameAndSalary service");
+
+		employees.sort(Comparator.comparing(Employee::getName).thenComparingDouble(Employee::getSalary));
+	}
+
 	private void sort() {
 		log.info("sort service");
 
@@ -54,7 +60,8 @@ public class ComparatorService {
 		// sortByAge(employees);
 		// sortByName(employees);
 		// csortBySalary(employees);
-		sortByNameAndAge(employees);
+		// sortByNameAndAge(employees);
+		sortByNameAndSalary(employees);
 
 		log.info("after sort employees: ");
 
