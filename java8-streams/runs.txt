@@ -273,3 +273,14 @@ RUN 2 groupingByNameAndCount
 2019-08-30 15:35:52.236  INFO 17952 --- [           main] poc.java.service.GroupingByService       : groupingByNameAndCount service
 2019-08-30 15:35:52.239  INFO 17952 --- [           main] poc.java.service.GroupingByService       : countByName: {banana=1, apple=2, pear=2}
 
+----------=----------
+RUN 2 groupingByIdentityAndCount
+
+2019-08-30 15:40:23.421  INFO 16400 --- [           main] poc.java.StreamsApp                      : Started StreamsApp in 0.585 seconds (JVM running for 0.976)
+2019-08-30 15:40:23.422  INFO 16400 --- [           main] eamsApp$$EnhancerBySpringCGLIB$$c13f6dab : run service
+2019-08-30 15:40:23.422  INFO 16400 --- [           main] poc.java.service.StreamService           : poc.java.service.StreamService: main service
+2019-08-30 15:40:23.423  INFO 16400 --- [           main] poc.java.service.GroupingByService       : poc.java.service.GroupingByService: main service
+2019-08-30 15:40:23.424  INFO 16400 --- [           main] poc.java.service.GroupingByService       : groupingBy service
+2019-08-30 15:40:23.426  INFO 16400 --- [           main] poc.java.service.GroupingByService       : fruits: [Fruit(name=apple, price=100.0, quantity=10), Fruit(name=banana, price=100.0, quantity=20), Fruit(name=pear, price=160.0, quantity=13), Fruit(name=apple, price=50.0, quantity=5), Fruit(name=pear, price=160.0, quantity=13)]
+2019-08-30 15:40:23.426  INFO 16400 --- [           main] poc.java.service.GroupingByService       : groupingByIdentityAndCount service
+2019-08-30 15:40:23.428  INFO 16400 --- [           main] poc.java.service.GroupingByService       : countByIdentity: {Fruit(name=apple, price=50.0, quantity=5)=1, Fruit(name=pear, price=160.0, quantity=13)=2, Fruit(name=apple, price=100.0, quantity=10)=1, Fruit(name=banana, price=100.0, quantity=20)=1}

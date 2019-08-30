@@ -2,6 +2,7 @@ package poc.java.service;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,15 @@ public class GroupingByService {
 		log.info("countByName: " + countByName);
 	}
 
+	private void groupingByIdentityAndCount(List<Fruit> fruits) {
+		log.info("groupingByIdentityAndCount service");
+
+		Map<Fruit, Long> countByIdentity = fruits.stream()
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+		log.info("countByIdentity: " + countByIdentity);
+	}
+
 	private void groupingBy() {
 		log.info("groupingBy service");
 
@@ -45,7 +55,9 @@ public class GroupingByService {
 		log.info("fruits: " + fruits);
 
 		// groupingByName(fruits);
-		groupingByNameAndCount(fruits);
+		// groupingByNameAndCount(fruits);
+		groupingByIdentityAndCount(fruits);
+
 	}
 
 	public void main() {
