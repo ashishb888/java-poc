@@ -48,6 +48,15 @@ public class GroupingByService {
 		log.info("countByIdentity: " + countByIdentity);
 	}
 
+	private void groupingByNameAndSum(List<Fruit> fruits) {
+		log.info("groupingByNameAndSum service");
+
+		Map<String, Integer> result = fruits.stream()
+				.collect(Collectors.groupingBy(Fruit::getName, Collectors.summingInt(Fruit::getQuantity)));
+
+		log.info("result: " + result);
+	}
+
 	private void groupingBy() {
 		log.info("groupingBy service");
 
@@ -56,7 +65,8 @@ public class GroupingByService {
 
 		// groupingByName(fruits);
 		// groupingByNameAndCount(fruits);
-		groupingByIdentityAndCount(fruits);
+		// groupingByIdentityAndCount(fruits);
+		groupingByNameAndSum(fruits);
 
 	}
 
