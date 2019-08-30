@@ -22,6 +22,12 @@ public class ComparatorService {
 		employees.sort((Employee e1, Employee e2) -> e1.getAge() - e2.getAge());
 	}
 
+	private void sortByName(List<Employee> employees) {
+		log.info("sortByName service");
+
+		employees.sort((Employee e1, Employee e2) -> e1.getName().compareTo(e2.getName()));
+	}
+
 	private void sort() {
 		log.info("sort service");
 
@@ -29,7 +35,8 @@ public class ComparatorService {
 
 		log.info("before sort employees: " + employees);
 
-		sortByAge(employees);
+		//sortByAge(employees);
+		sortByName(employees);
 
 		log.info("after sort employees: " + employees);
 	}
