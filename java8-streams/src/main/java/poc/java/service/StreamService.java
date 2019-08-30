@@ -27,6 +27,8 @@ public class StreamService {
 	private PSStreamService psService;
 	@Autowired
 	private ComparatorService cs;
+	@Autowired
+	private GroupingByService gs;
 
 	private void m1() {
 		logger.info("m1 service");
@@ -45,6 +47,7 @@ public class StreamService {
 		// m1();
 		// functionalService.main();
 		// psService.main();
-		cs.main();
+		// cs.main();
+		gs.main();
 	}
 }
