@@ -1,3 +1,8 @@
 spring:
  application:
   name: java8-streams
+
+logging:
+  level:
+    root: info
+  file: /var/log/apps/java8-streams/java8-streams
