@@ -134,6 +134,33 @@ public class ExampleService {
 		return jumps;
 	}
 
+	private int simpleArraySum(int[] arr) {
+		log.info("simpleArraySum service");
+
+		return IntStream.of(arr).sum();
+	}
+
+	private int countingValleys(int n, String s) {
+		char[] arr = s.toCharArray();
+		int valleys = 0;
+		int level = 0;
+
+		for (int j = 0; j < n; j++) {
+			if (arr[j] == 'U') {
+				if (level == -1)
+					valleys += 1;
+
+				level += 1;
+			} else if (arr[j] == 'D') {
+				level -= 1;
+			}
+		}
+
+		log.info("valleys: " + valleys);
+
+		return valleys;
+	}
+
 	private void examples() {
 		log.info("examples service");
 		// repeatedString("aba", 10);
@@ -145,14 +172,16 @@ public class ExampleService {
 		// x
 		// 882787
 
-		jumpingOnClouds(new int[] { 0, 0, 1, 0, 0, 1, 0 });
-		jumpingOnClouds(new int[] { 0, 0, 0, 0, 1, 0 });
-
-		jumpingOnClouds(new int[] { 0, 0 });
+//		jumpingOnClouds(new int[] { 0, 0, 1, 0, 0, 1, 0 });
+//		jumpingOnClouds(new int[] { 0, 0, 0, 0, 1, 0 });
+//
+//		jumpingOnClouds(new int[] { 0, 0 });
 
 //		2
 //		0 0
 //		1
+
+		countingValleys(8, "UDDDUDUU");
 	}
 
 	public void main() {
