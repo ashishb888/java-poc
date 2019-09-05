@@ -3,6 +3,7 @@ package poc.java.service;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -95,16 +96,63 @@ public class ExampleService {
 		return finalCount;
 	}
 
+	private int jumpingOnClouds(int[] c) {
+		log.info("jumpingOnClouds service");
+
+		int i = 0;
+		int jumps = 0;
+		int len = c.length;
+
+		if (len == 2) {
+			return 1;
+		}
+
+		while (i < len - 2) {
+			if (c[i + 2] == 1)
+				i += 1;
+			else
+				i += 2;
+
+			jumps += 1;
+
+			if (i == len - 2) {
+				jumps += 1;
+			}
+
+		}
+
+//		while (i < len - 2) {
+//			if (i == len - 2 && c[i + 2] == 0)
+//				i += 2;
+//			else
+//				i += 1;
+//
+//			jumps += 1;
+//		}
+
+		log.info("jumps: " + jumps);
+		return jumps;
+	}
+
 	private void examples() {
 		log.info("examples service");
-		repeatedString("aba", 10);
+		// repeatedString("aba", 10);
 		// repeatedString("a", 1000000000000L);
-		repeatedString("aab", 882787);
+		// repeatedString("aab", 882787);
 		// aab
 		// 882787
 		// 588525
 		// x
 		// 882787
+
+		jumpingOnClouds(new int[] { 0, 0, 1, 0, 0, 1, 0 });
+		jumpingOnClouds(new int[] { 0, 0, 0, 0, 1, 0 });
+
+		jumpingOnClouds(new int[] { 0, 0 });
+
+//		2
+//		0 0
+//		1
 	}
 
 	public void main() {
