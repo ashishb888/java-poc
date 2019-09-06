@@ -6,6 +6,7 @@ import lombok.extern.java.Log;
 
 @Service
 @Log
+@SuppressWarnings("unused")
 public class ThreadService {
 
 	static boolean done;

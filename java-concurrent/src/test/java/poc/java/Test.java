@@ -3,6 +3,7 @@ package poc.java;
 import lombok.extern.java.Log;
 
 @Log
+@SuppressWarnings("unused")
 public class Test {
 	static boolean done;
 

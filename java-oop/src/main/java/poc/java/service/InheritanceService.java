@@ -8,6 +8,7 @@ import poc.java.domain.Cat;
 
 @Service
 @Log
+@SuppressWarnings("static-access")
 public class InheritanceService {
 
 	public void inheritance() {

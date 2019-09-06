@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+@SuppressWarnings("unused")
 public class ConcurrentService {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
