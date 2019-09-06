@@ -63,10 +63,19 @@ public class ObservableService {
 		});
 	}
 
+	private void empty() {
+		log.info("empty service");
+
+		Observable.empty().defaultIfEmpty("This is an empty Observable").subscribe(data -> {
+			log.info("data: " + data);
+		});
+	}
+
 	public void main() {
 		log.info("main service");
 
 		// just();
-		from();
+		// from();
+		empty();
 	}
 }

@@ -22,3 +22,12 @@ RUN 1 from
 2019-09-06 15:30:00.997  INFO 2260 --- [           main] poc.java.service.ObservableService       : Completed
 
 ----------=----------
+
+RUN 2 empty
+
+2019-09-06 15:38:36.845  INFO 11072 --- [           main] poc.java.JavaRxApp                       : Started JavaRxApp in 0.616 seconds (JVM running for 1.009)
+2019-09-06 15:38:36.846  INFO 11072 --- [           main] poc.java.JavaRxApp                       : run service
+2019-09-06 15:38:36.846  INFO 11072 --- [           main] poc.java.service.JavaRxService           : main service
+2019-09-06 15:38:36.846  INFO 11072 --- [           main] poc.java.service.ObservableService       : main service
+2019-09-06 15:38:36.846  INFO 11072 --- [           main] poc.java.service.ObservableService       : empty service
+2019-09-06 15:38:36.856  INFO 11072 --- [           main] poc.java.service.ObservableService       : data: This is an empty Observable
