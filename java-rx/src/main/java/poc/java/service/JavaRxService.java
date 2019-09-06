@@ -1,5 +1,6 @@
 package poc.java.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
@@ -10,10 +11,14 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
+@SuppressWarnings("unused")
 public class JavaRxService {
+	@Autowired
+	private ObservableService os;
 
 	public void main() {
 		log.info("main service");
 
+		os.main();
 	}
 }
