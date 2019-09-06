@@ -1,0 +1,8 @@
+spring:
+ application:
+  name: java-collection
+
+logging:
+  level:
+    root: info
+  file: /var/log/apps/java-collection/java-collection
