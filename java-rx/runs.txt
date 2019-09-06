@@ -1,0 +1,24 @@
+ObservableService
+
+RUN 1 from
+
+2019-09-06 15:30:00.983  INFO 2260 --- [           main] poc.java.JavaRxApp                       : Started JavaRxApp in 0.639 seconds (JVM running for 1.023)
+2019-09-06 15:30:00.983  INFO 2260 --- [           main] poc.java.JavaRxApp                       : run service
+2019-09-06 15:30:00.983  INFO 2260 --- [           main] poc.java.service.JavaRxService           : main service
+2019-09-06 15:30:00.984  INFO 2260 --- [           main] poc.java.service.ObservableService       : main service
+2019-09-06 15:30:00.984  INFO 2260 --- [           main] poc.java.service.ObservableService       : from service
+2019-09-06 15:30:00.994  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=M, age=28, salary=8000.0, department=IT, gender=MALE)
+2019-09-06 15:30:00.994  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=F, age=20, salary=10000.0, department=TESTING, gender=FEMALE)
+2019-09-06 15:30:00.994  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=X, age=38, salary=80000.0, department=IT, gender=MALE)
+2019-09-06 15:30:00.994  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE)
+2019-09-06 15:30:00.994  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=P, age=80, salary=20000.0, department=IT, gender=FEMALE)
+2019-09-06 15:30:00.994  INFO 2260 --- [           main] poc.java.service.ObservableService       : Completed
+2019-09-06 15:30:00.996  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=M, age=28, salary=8000.0, department=IT, gender=MALE)
+2019-09-06 15:30:00.996  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=X, age=38, salary=80000.0, department=IT, gender=MALE)
+2019-09-06 15:30:00.996  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=B, age=28, salary=18000.0, department=IT, gender=MALE)
+2019-09-06 15:30:00.996  INFO 2260 --- [           main] poc.java.service.ObservableService       : Completed
+2019-09-06 15:30:00.997  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=F, age=20, salary=10000.0, department=TESTING, gender=FEMALE)
+2019-09-06 15:30:00.997  INFO 2260 --- [           main] poc.java.service.ObservableService       : data: Employee(name=P, age=80, salary=20000.0, department=IT, gender=FEMALE)
+2019-09-06 15:30:00.997  INFO 2260 --- [           main] poc.java.service.ObservableService       : Completed
+
+----------=----------
