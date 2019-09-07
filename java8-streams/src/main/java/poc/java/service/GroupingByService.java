@@ -9,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import poc.java.domain.Fruit;
 import poc.java.repos.FruitRepository;
 
 @Service
-@Log
+@Slf4j
 @SuppressWarnings("unused")
 public class GroupingByService {
 
