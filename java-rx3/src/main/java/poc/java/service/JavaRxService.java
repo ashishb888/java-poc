@@ -17,11 +17,14 @@ public class JavaRxService {
 	private FlowableService fs;
 	@Autowired
 	private ObservableService os;
+	@Autowired
+	private SchedulersService ss;
 
 	public void main() {
 		log.info("main service");
 
-		os.main();
+		ss.main();
+		// os.main();
 		// fs.main();
 	}
 }
