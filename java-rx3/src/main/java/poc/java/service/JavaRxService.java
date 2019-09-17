@@ -15,10 +15,13 @@ import lombok.extern.slf4j.Slf4j;
 public class JavaRxService {
 	@Autowired
 	private FlowableService fs;
+	@Autowired
+	private ObservableService os;
 
 	public void main() {
 		log.info("main service");
 
-		fs.main();
+		os.main();
+		// fs.main();
 	}
 }

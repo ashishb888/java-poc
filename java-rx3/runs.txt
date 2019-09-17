@@ -1,0 +1,60 @@
+ObservableService
+
+RUN 1 create
+
+2019-09-16 19:41:16.798  INFO 6820 --- [           main] poc.java.JavaRxApp                       : Started JavaRxApp in 1.608 seconds (JVM running for 2.008)
+2019-09-16 19:41:16.799  INFO 6820 --- [           main] poc.java.JavaRxApp                       : run service
+2019-09-16 19:41:16.799  INFO 6820 --- [           main] poc.java.service.JavaRxService           : main service
+2019-09-16 19:41:16.799  INFO 6820 --- [           main] poc.java.service.ObservableService       : main service
+2019-09-16 19:41:16.799  INFO 6820 --- [           main] poc.java.service.ObservableService       : create service
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076808
+1568643076809
+java.lang.IllegalStateException: Odd millis
+	at poc.java.service.ObservableService.lambda$0(ObservableService.java:31)
+	at io.reactivex.rxjava3.internal.operators.observable.ObservableCreate.subscribeActual(ObservableCreate.java:40)
+	at io.reactivex.rxjava3.core.Observable.subscribe(Observable.java:12332)
+	at io.reactivex.rxjava3.core.Observable.subscribe(Observable.java:12318)
+	at io.reactivex.rxjava3.core.Observable.subscribe(Observable.java:12281)
+	at poc.java.service.ObservableService.create(ObservableService.java:35)
+	at poc.java.service.ObservableService.main(ObservableService.java:42)
+	at poc.java.service.JavaRxService.main(JavaRxService.java:24)
+	at poc.java.JavaRxApp.run(JavaRxApp.java:29)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at poc.java.JavaRxApp.main(JavaRxApp.java:22)
+
