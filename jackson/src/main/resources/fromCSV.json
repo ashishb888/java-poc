@@ -1,0 +1,9 @@
+[ {
+  "item" : "FIRST ITEM",
+  "quantity" : 8,
+  "unitPrice" : 5.23
+}, {
+  "item" : "SECOND ITEM",
+  "quantity" : 10,
+  "unitPrice" : 6.45
+} ]
