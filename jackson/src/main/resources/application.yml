@@ -1,0 +1,8 @@
+spring:
+ application:
+  name: jackson
+  
+logging:
+  level:
+    root: info
+  file: /var/log/apps/jackson/jackson
