@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: jmx-gs
+  
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/tmp/log/apps/jmx-gs/jmx-gs

@@ -1,0 +1,21 @@
+JmxService RUN 1
+
+2019-10-18 14:44:10.439  INFO 18948 --- [           main] poc.java.JmxApp                          : Starting JmxApp on WSWRVUA05124A with PID 18948 (E:\ashishb\git\java-poc\jmx-gs\target\classes started by tcs_abhosle in E:\ashishb\git\java-poc\jmx-gs)
+2019-10-18 14:44:10.441 DEBUG 18948 --- [           main] poc.java.JmxApp                          : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-10-18 14:44:10.441  INFO 18948 --- [           main] poc.java.JmxApp                          : No active profile set, falling back to default profiles: default
+2019-10-18 14:44:10.758  INFO 18948 --- [           main] poc.java.JmxApp                          : Started JmxApp in 0.614 seconds (JVM running for 1.036)
+2019-10-18 14:44:10.759  INFO 18948 --- [           main] .JmxApp$$EnhancerBySpringCGLIB$$f815e0ef : run service
+2019-10-18 14:44:10.759 DEBUG 18948 --- [           main] poc.java.service.JmxService              : main service
+2019-10-18 14:44:10.759 DEBUG 18948 --- [           main] poc.java.service.JmxService              : start service
+[Loaded sun.reflect.GeneratedMethodAccessor40 from __JVM_DefineClass__]
+[Loaded sun.reflect.GeneratedMethodAccessor41 from __JVM_DefineClass__]
+[Loaded sun.reflect.GeneratedMethodAccessor42 from __JVM_DefineClass__]
+[Loaded sun.reflect.GeneratedMethodAccessor43 from __JVM_DefineClass__]
+[Loaded sun.reflect.GeneratedMethodAccessor44 from __JVM_DefineClass__]
+[Loaded sun.reflect.GeneratedMethodAccessor45 from __JVM_DefineClass__]
+[Loaded sun.reflect.GeneratedMethodAccessor46 from __JVM_DefineClass__]
+2019-10-18 14:47:22.327  INFO 18948 --- [on(5)-127.0.0.1] poc.java.domain.Hello                    : Hello from JMX
+2019-10-18 14:48:06.159  INFO 18948 --- [on(3)-127.0.0.1] poc.java.domain.Hello                    : Hello from JMX
+
+
+----------=----------
