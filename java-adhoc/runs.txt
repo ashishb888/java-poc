@@ -1,0 +1,20 @@
+JavaAdhocService RUN 1
+
+2019-10-31 15:06:10.086  INFO 6624 --- [           main] dhocApp$$EnhancerBySpringCGLIB$$d1cd13c8 : run service
+2019-10-31 15:06:10.086 DEBUG 6624 --- [           main] poc.java.service.JavaAdhocService        : main service
+2019-10-31 15:06:10.101 DEBUG 6624 --- [           main] poc.java.service.JavaAdhocService        : start service
+2019-10-31 15:06:10.101 DEBUG 6624 --- [           main] poc.java.service.JavaAdhocService        : td1: TestDomain(s1=1, s2=1, i1=2, i2=2)
+2019-10-31 15:06:10.101 DEBUG 6624 --- [           main] poc.java.service.JavaAdhocService        : td2: TestDomain(s1=1, s2=1, i1=2, i2=2)
+
+----------=----------
+
+JavaAdhocService RUN 2
+
+2019-10-31 15:09:44.066  INFO 472 --- [           main] dhocApp$$EnhancerBySpringCGLIB$$e721f661 : run service
+2019-10-31 15:09:44.066 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : main service
+2019-10-31 15:09:44.067 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : start service
+2019-10-31 15:09:44.067 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : td1: TestDomain(s1=1, s2=1, i1=1, i2=1)
+2019-10-31 15:09:44.067 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : td2: TestDomain(s1=1, s2=1, i1=1, i2=1)
+2019-10-31 15:09:44.067 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : After setters
+2019-10-31 15:09:44.067 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : td1: TestDomain(s1=1, s2=1, i1=2, i2=2)
+2019-10-31 15:09:44.067 DEBUG 472 --- [           main] poc.java.service.JavaAdhocService        : td2: TestDomain(s1=1, s2=1, i1=2, i2=2)

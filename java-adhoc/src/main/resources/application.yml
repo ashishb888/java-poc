@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: java-adhoc
+  
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/tmp/log/apps/java-adhoc/java-adhoc
