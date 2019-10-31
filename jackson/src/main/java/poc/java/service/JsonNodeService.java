@@ -51,8 +51,11 @@ public class JsonNodeService {
 			MappingIterator<Order> orders = csvMapper.readerFor(Order.class).with(csvSchema)
 					.readValues(new File("src/main/resources/test.csv"));
 
-			new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true)
-					.writeValue(new File("src/main/resources/fromCSV.json"), orders.readAll());
+			orders.readAll().forEach(r->{
+				log.info("r: " + r);
+			});
+//			new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true)
+//					.writeValue(new File("src/main/resources/fromCSV.json"), orders.readAll());
 
 		} catch (IOException e) {
 			log.error("", e);
