@@ -6,4 +6,4 @@ logging:
   level:
     root: info
     poc.java: debug
-  file: /var/log/apps/executors-fw/executors-fw
+  file: /var/tmp/apps/executors-fw/executors-fw
