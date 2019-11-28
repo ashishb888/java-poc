@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: executors-fw
+
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/executors-fw/executors-fw
