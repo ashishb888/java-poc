@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import poc.java.exception.UncaughtExceptionHandlerImpl;
 
 @Setter
 @Getter
@@ -22,6 +23,9 @@ public class ThreadFactoryImpl implements ThreadFactory {
 	public Thread newThread(Runnable task) {
 		Thread t = new Thread(this.threadGroup, task, prefix + count.getAndIncrement());
 		t.setPriority(this.priority);
+		t.setUncaughtExceptionHandler(new UncaughtExceptionHandlerImpl());
+		// Thread.setDefaultUncaughtExceptionHandler(new
+		// UncaughtExceptionHandlerImpl());
 
 		return t;
 	}

@@ -26,7 +26,7 @@ public class ThreadFactoryService {
 
 			for (int i = 0; i < 5; i++) {
 				int li = i;
-				es.submit(() -> {
+				es.execute(() -> {
 					log.debug("submit: " + li);
 
 					if (li == 2) {
@@ -35,11 +35,17 @@ public class ThreadFactoryService {
 
 					while (true) {
 						log.debug("KS TEST");
-						Thread.sleep(5000);
+						try {
+							Thread.sleep(10000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
 					}
 
 				});
 			}
+
+			es.shutdown();
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 		}
@@ -60,7 +66,7 @@ public class ThreadFactoryService {
 
 						while (true) {
 							log.debug("TS TEST");
-							Thread.sleep(5000);
+							Thread.sleep(10000);
 						}
 					} catch (Exception e) {
 						log.error(e.getMessage(), e);
