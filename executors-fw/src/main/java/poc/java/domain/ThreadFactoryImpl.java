@@ -3,6 +3,7 @@ package poc.java.domain;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,11 +11,12 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ThreadFactoryImpl implements ThreadFactory {
 	private int priority;
 	private ThreadGroup threadGroup;
 	private String prefix;
-	private AtomicInteger count = new AtomicInteger(1);
+	private AtomicInteger count;
 
 	@Override
 	public Thread newThread(Runnable task) {
@@ -22,13 +24,6 @@ public class ThreadFactoryImpl implements ThreadFactory {
 		t.setPriority(this.priority);
 
 		return t;
-	}
-
-	public ThreadFactoryImpl(int priority, ThreadGroup threadGroup, String prefix) {
-		super();
-		this.priority = priority;
-		this.threadGroup = threadGroup;
-		this.prefix = prefix;
 	}
 
 }
