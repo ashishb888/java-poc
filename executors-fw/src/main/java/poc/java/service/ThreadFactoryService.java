@@ -27,10 +27,13 @@ public class ThreadFactoryService {
 			for (int i = 0; i < 5; i++) {
 				int li = i;
 				es.execute(() -> {
-					log.debug("submit: " + li);
+					log.debug("execute: " + li);
 
 					if (li == 2) {
-						int k = 5 / 0; // This exception will not be logged & the thread will go in waiting state
+						// This exception was not logged. But now we have used execute instead of submit
+						// & attached UncaughtExceptionHandlerImpl to catch uncaught exceptions. So this
+						// exception will be caught by UncaughtExceptionHandlerImpl
+						int k = 5 / 0;
 					}
 
 					while (true) {

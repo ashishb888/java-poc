@@ -64,3 +64,31 @@ java.lang.ArithmeticException: / by zero
         at java.lang.Thread.run(Thread.java:748)
 
 ----------==----------
+RUN 2
+
+execute: This exception is handled by UncaughtExceptionHandlerImpl
+
+2019-11-29 17:48:55.043 ERROR 13640 --- [kafka-consumer3] p.j.e.UncaughtExceptionHandlerImpl       : / by zero
+
+java.lang.ArithmeticException: / by zero
+	at poc.java.service.ThreadFactoryService.lambda$0(ThreadFactoryService.java:33)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+2019-11-29 17:48:55.043 ERROR 13640 --- [ test-consumer3] poc.java.service.ThreadFactoryService    : / by zero
+
+----------
+
+submit
+
+java.lang.ArithmeticException: / by zero
+	at poc.java.service.ThreadFactoryService.lambda$1(ThreadFactoryService.java:64)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+----------==----------
