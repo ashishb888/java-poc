@@ -1,0 +1,66 @@
+RUN 1
+
+es.submit(() -> {
+log.debug("test submit: " + li);
+
+try {
+    if (li == 2) {
+        int k = 5 / 0; // This exception will be logged & the thread will go in waiting state
+    }
+
+    while (true) {
+        log.debug("TS TEST");
+        Thread.sleep(10000);
+    }
+} catch (Exception e) {
+    log.error(e.getMessage(), e);
+}
+
+});
+
+----------
+
+es.execute(() -> {
+log.debug("submit: " + li);
+
+if (li == 2) {
+    int k = 5 / 0; // This exception will not be logged & the thread will go in waiting state
+}
+
+while (true) {
+    log.debug("KS TEST");
+    try {
+        Thread.sleep(10000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+}
+
+});
+
+2019-11-29 15:15:23.028  INFO 166199 --- [           main] poc.java.ExecutorFwApp                   : Started ExecutorFwApp in 1.074 seconds (JVM running for 1.498)
+2019-11-29 15:15:23.029 DEBUG 166199 --- [           main] poc.java.ExecutorFwApp                   : run service
+2019-11-29 15:15:23.029 DEBUG 166199 --- [           main] poc.java.service.ExecutorFwService       : main service
+2019-11-29 15:15:23.029 DEBUG 166199 --- [           main] poc.java.service.ThreadFactoryService    : main service
+2019-11-29 15:15:23.029 DEBUG 166199 --- [           main] poc.java.service.ThreadFactoryService    : start service
+2019-11-29 15:15:23.032 DEBUG 166199 --- [kafka-consumer1] poc.java.service.ThreadFactoryService    : submit: 0
+2019-11-29 15:15:23.033 DEBUG 166199 --- [kafka-consumer2] poc.java.service.ThreadFactoryService    : submit: 1
+2019-11-29 15:15:23.033 DEBUG 166199 --- [kafka-consumer4] poc.java.service.ThreadFactoryService    : submit: 3
+2019-11-29 15:15:23.034 DEBUG 166199 --- [kafka-consumer3] poc.java.service.ThreadFactoryService    : submit: 2
+2019-11-29 15:15:23.035 DEBUG 166199 --- [kafka-consumer5] poc.java.service.ThreadFactoryService    : submit: 4
+2019-11-29 15:15:23.035 DEBUG 166199 --- [ test-consumer1] poc.java.service.ThreadFactoryService    : test submit: 0
+2019-11-29 15:15:23.036 DEBUG 166199 --- [ test-consumer2] poc.java.service.ThreadFactoryService    : test submit: 1
+2019-11-29 15:15:23.036 DEBUG 166199 --- [ test-consumer3] poc.java.service.ThreadFactoryService    : test submit: 2
+2019-11-29 15:15:23.037 DEBUG 166199 --- [ test-consumer4] poc.java.service.ThreadFactoryService    : test submit: 3
+2019-11-29 15:15:23.037 DEBUG 166199 --- [ test-consumer5] poc.java.service.ThreadFactoryService    : test submit: 4
+2019-11-29 15:15:23.039 ERROR 166199 --- [ test-consumer3] poc.java.service.ThreadFactoryService    : / by zero
+
+java.lang.ArithmeticException: / by zero
+        at poc.java.service.ThreadFactoryService.lambda$1(ThreadFactoryService.java:56)
+        at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+        at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+
+----------==----------
