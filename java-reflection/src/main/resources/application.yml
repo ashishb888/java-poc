@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: java-reflection
+
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/java-reflection/java-reflection
