@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: java-data-structures
+
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/java-data-structures/java-data-structures
