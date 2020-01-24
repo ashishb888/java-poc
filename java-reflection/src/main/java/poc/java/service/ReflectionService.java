@@ -1,5 +1,6 @@
 package poc.java.service;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +32,14 @@ public class ReflectionService {
 
 	private void start() {
 		log.debug("start service");
+
+		String s = "{\"type\":\"struct\",\"fields\":[{\"type\":\"float64\",\"optional\":false,\"field\":\"d1\"},{\"type\":\"string\",\"optional\":false,\"field\":\"s1\"},{\"type\":\"int16\",\"optional\":false,\"field\":\"st1\"},{\"type\":\"int64\",\"optional\":false,\"field\":\"l1\"}],\"optional\":false,\"name\":\"Value\"}";
+		try {
+			StructSchema sh = objectMapper.readValue(s, StructSchema.class);
+			log.debug("sh: " + sh);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 
 		List<Field> fieldsLs = Arrays.stream(Value.class.getDeclaredFields())
 				.filter(f -> !f.getName().toLowerCase().equals("serialversionuid")).collect(Collectors.toList());
