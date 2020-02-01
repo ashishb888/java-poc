@@ -53,3 +53,15 @@ RetryService RUN 1
 2020-02-01 11:53:47.470 DEBUG 18596 --- [           main] poc.java.service.RetryService            : init ends
 
 ----------=----------
+
+RetryService RUN 2
+
+2020-02-01 11:55:00.932  INFO 18720 --- [           main] dhocApp$$EnhancerBySpringCGLIB$$50ceba98 : run service
+2020-02-01 11:55:00.932 DEBUG 18720 --- [           main] poc.java.service.JavaAdhocService        : main service
+2020-02-01 11:55:00.932 DEBUG 18720 --- [           main] poc.java.service.RetryService            : main service
+2020-02-01 11:55:00.932 DEBUG 18720 --- [           main] poc.java.service.RetryService            : init starts
+2020-02-01 11:55:00.932 DEBUG 18720 --- [           main] poc.java.service.RetryService            : start service
+2020-02-01 11:55:00.932 DEBUG 18720 --- [           main] poc.java.service.RetryService            : retries: 0
+2020-02-01 11:55:00.933 DEBUG 18720 --- [           main] poc.java.service.RetryService            : init ends
+
+----------=----------

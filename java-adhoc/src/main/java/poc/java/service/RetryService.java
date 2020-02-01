@@ -15,7 +15,7 @@ public class RetryService {
 	private void start() {
 		log.debug("start service");
 
-		throw new RuntimeException("Intended exception");
+		// throw new RuntimeException("Intended exception");
 	}
 
 	private void init() {
