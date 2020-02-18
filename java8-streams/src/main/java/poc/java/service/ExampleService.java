@@ -161,7 +161,7 @@ public class ExampleService {
 		return valleys;
 	}
 
-	private void examples() {
+	private int examples() {
 		log.info("examples service");
 		// repeatedString("aba", 10);
 		// repeatedString("a", 1000000000000L);
@@ -181,13 +181,13 @@ public class ExampleService {
 //		0 0
 //		1
 
-		countingValleys(8, "UDDDUDUU");
+		return countingValleys(8, "UDDDUDUU");
 	}
 
-	public void main() {
+	public int main() {
 		log.info("main service");
 
-		examples();
+		return examples();
 	}
 
 }
