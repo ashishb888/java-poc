@@ -1,31 +1,31 @@
 package poc.java;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import lombok.extern.slf4j.Slf4j;
 import poc.java.service.JavaService;
 
 /**
  * @author ashishb888
  */
 
+@Slf4j
 @SpringBootApplication
-public class StreamsApp implements CommandLineRunner {
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
+public class JavaApp implements CommandLineRunner {
+
 	@Autowired
 	private JavaService streamService;
 
 	public static void main(String[] args) {
-		SpringApplication.run(StreamsApp.class, args);
+		SpringApplication.run(JavaApp.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info("run service");
+		log.debug("run service");
 
 		streamService.main();
 	}

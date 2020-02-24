@@ -5,4 +5,5 @@ spring:
 logging:
   level:
     root: info
+    poc.java: debug
   file: /var/log/apps/java-byte-buddy/java-byte-buddy

@@ -1,0 +1,11 @@
+RUN 1
+
+2020-02-24 16:48:48.182  INFO 20168 --- [           main] poc.java.JavaApp                         : Started JavaApp in 0.665 seconds (JVM running for 1.099)
+2020-02-24 16:48:48.182 DEBUG 20168 --- [           main] poc.java.JavaApp                         : run service
+2020-02-24 16:48:48.183 DEBUG 20168 --- [           main] poc.java.service.JavaService             : main service
+2020-02-24 16:48:48.183 DEBUG 20168 --- [           main] poc.java.service.ByteBuddyService        : main service
+2020-02-24 16:48:48.183 DEBUG 20168 --- [           main] poc.java.service.ByteBuddyService        : fixedValue service
+2020-02-24 16:48:48.319 DEBUG 20168 --- [           main] poc.java.service.ByteBuddyService        : dynamicType: class net.bytebuddy.renamed.java.lang.Object$ByteBuddy$KLeUAWnX
+2020-02-24 16:48:48.319 DEBUG 20168 --- [           main] poc.java.service.ByteBuddyService        : dynamicType: Hello World!
+
+----------=----------

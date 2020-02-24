@@ -1,5 +1,6 @@
 package poc.java.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import lombok.extern.slf4j.Slf4j;
@@ -12,8 +13,12 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class JavaService {
 
-	public void main() {
-		log.info("main service");
+	@Autowired
+	private ByteBuddyService bbs;
 
+	public void main() {
+		log.debug("main service");
+
+		bbs.main();
 	}
 }
