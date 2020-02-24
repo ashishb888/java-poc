@@ -47,7 +47,7 @@
 					<!-- MainClass in mainfest make a executable jar -->
 					<archive>
 						<manifest>
-							<mainClass>poc.java.service.SimpleBMService</mainClass>
+							<mainClass>poc.java.service.MainService</mainClass>
 						</manifest>
 					</archive>
 
@@ -55,7 +55,6 @@
 				<executions>
 					<execution>
 						<id>make-assembly</id>
-						<!-- bind to the packaging phase -->
 						<phase>package</phase>
 						<goals>
 							<goal>single</goal>
