@@ -1,0 +1,8 @@
+spring:
+ application:
+  name: java-byte-buddy
+
+logging:
+  level:
+    root: info
+  file: /var/log/apps/java-byte-buddy/java-byte-buddy
