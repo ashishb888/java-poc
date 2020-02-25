@@ -26,10 +26,10 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<!-- <mainClass>fully.qualified.MainClass</mainClass> -->
+							<mainClass>poc.java.agent.DynamicAgent</mainClass>
 						</manifest>
 						<manifestEntries>
-							<Premain-Class>poc.java.staticagent.PreEntry</Premain-Class>
+							<Premain-Class>poc.java.agent.StaticAgent</Premain-Class>
 						</manifestEntries>
 					</archive>
 				</configuration>
