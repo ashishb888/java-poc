@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: java-agents
+
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/java-agents/java-agents
