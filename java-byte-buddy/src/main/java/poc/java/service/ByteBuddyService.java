@@ -47,7 +47,7 @@ public class ByteBuddyService {
 			// fixedValue();
 			methodDelegation();
 		} catch (InstantiationException | IllegalAccessException e) {
-			e.printStackTrace();
+			log.error(e.getMessage(), e);
 		}
 	}
 }
