@@ -18,21 +18,6 @@
 
 	<build>
 		<plugins>
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
-				<version>3.2.0</version> <configuration> <archive> <manifestFile> MANIFEST.MF 
-				</manifestFile> <manifest> <addClasspath>true</addClasspath> <mainClass> 
-				poc.java.staticagent.PreEnrty </mainClass> </manifest> </archive> </configuration> 
-				</plugin> -->
-
-			<!-- <plugin> <artifactId>maven-assembly-plugin</artifactId> <version>3.2.0</version> 
-				<configuration> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> 
-				</descriptorRefs> <archive> <index>true</index> <manifest> <addClasspath>true</addClasspath> 
-				<addDefaultImplementationEntries>true</addDefaultImplementationEntries> <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries> 
-				</manifest> <manifestEntries> <Premain-Class>poc.java.staticagent.PreEnrty</Premain-Class> 
-				</manifestEntries> </archive> </configuration> <executions> <execution> <id>make-assembly</id> 
-				<phase>package</phase> <goals> <goal>single</goal> </goals> </execution> 
-				</executions> </plugin> -->
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
