@@ -1,0 +1,29 @@
+RUN 1
+
+Application JAR
+
+[user@host java-agents-client]$ cat META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+Build-Jdk-Spec: 1.8
+Created-By: Maven Jar Plugin 3.2.0
+Main-Class: poc.java.main.Main
+
+[user@host java-agents-client]$ $JAVA_HOME/bin/java -jar java-agents-client-0.0.1-SNAPSHOT.jar
+Hello from Main
+
+----------
+
+Java agent JAR
+
+[user@host java-agents]$ cat META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+Premain-Class: poc.java.staticagent.PreEnrty
+Build-Jdk-Spec: 1.8
+Created-By: Maven Jar Plugin 3.2.0
+
+
+[user@host java-agents-client]$ $JAVA_HOME/bin/java -javaagent:/opt/ashishb/apps/java/java-agents/java-agents-0.0.1-SNAPSHOT.jar=JavaAgent -jar java-agents-client-0.0.1-SNAPSHOT.jar
+Hello from JavaAgent
+Hello from Main
+
+----------=----------
