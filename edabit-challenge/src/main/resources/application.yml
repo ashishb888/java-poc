@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: edabit-challenge
+
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/edabit-challenge/edabit-challenge
