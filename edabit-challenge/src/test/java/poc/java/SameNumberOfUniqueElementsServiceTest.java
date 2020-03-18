@@ -31,6 +31,6 @@ public class SameNumberOfUniqueElementsServiceTest {
 
 	@Test
 	public void same4() {
-		assertEquals(true, snoues.same(new int[] { 1, 1, 2, 2, 3 }, new int[] { 2, 2, 1, 1, }));
+		assertEquals(false, snoues.same(new int[] { 1, 1, 2, 2, 3 }, new int[] { 2, 2, 1, 1, }));
 	}
 }
