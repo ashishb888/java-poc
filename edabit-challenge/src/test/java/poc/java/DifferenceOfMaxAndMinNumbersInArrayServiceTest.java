@@ -6,20 +6,30 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import poc.java.service.DifferenceOfMaxAndMinNumbersInArrayService;
+import poc.java.service.FindTheMissingLetterService;
 
 @SpringBootTest
 public class DifferenceOfMaxAndMinNumbersInArrayServiceTest {
 	@Autowired
-	private DifferenceOfMaxAndMinNumbersInArrayService service;
+	private FindTheMissingLetterService service;
 
 	@Test
 	public void test1() {
-		assertEquals(82, service.differenceMaxMin(new int[] { 10, 4, 1, 4, -10, -50, 32, 21 }));
+		assertEquals("d", service.missingLetter(new String[] { "a", "b", "c", "e", "f", "g" }));
 	}
 
 	@Test
 	public void test2() {
-		assertEquals(67, service.differenceMaxMin(new int[] { 44, 32, 86, 19 }));
+		assertEquals("P", service.missingLetter(new String[] { "O", "Q", "R", "S" }));
+	}
+
+	@Test
+	public void test3() {
+		assertEquals("y", service.missingLetter(new String[] { "t", "u", "v", "w", "x", "z" }));
+	}
+
+	@Test
+	public void test4() {
+		assertEquals("n", service.missingLetter(new String[] { "m", "o" }));
 	}
 }
