@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: double-formatter
+  
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/double-formatter/double-formatter
