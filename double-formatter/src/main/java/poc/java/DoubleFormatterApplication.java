@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import lombok.extern.slf4j.Slf4j;
+import poc.java.service.BigDecimalService;
 import poc.java.service.DoubleFormatterService;
 
 @Slf4j
@@ -16,6 +17,8 @@ public class DoubleFormatterApplication {
 
 	@Autowired
 	private DoubleFormatterService dfs;
+	@Autowired
+	private BigDecimalService bds;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DoubleFormatterApplication.class, args);
@@ -26,7 +29,8 @@ public class DoubleFormatterApplication {
 		return args -> {
 			log.debug("run service");
 
-			dfs.main();
+			bds.main();
+			// dfs.main();
 		};
 	}
 }
