@@ -1,10 +1,8 @@
 package poc.java.service;
 
-import java.util.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
-import java.util.Arrays;
 import java.util.TimeZone;
 
 import org.springframework.stereotype.Service;
@@ -55,13 +53,9 @@ public class JavaTimeService {
 		long millis80 = 83403758866254L; // 2020-04-29 15:12:43.0
 		int seconds80 = 1272618900; // 2020-04-29 09:15:00.0
 
-		// timestamp from millis80: 2020-04-29 15:12:43.0
-		// date from millis80: Wed Apr 29 15:12:43 UTC 2020
-		// date from seconds80: Wed Apr 29 09:15:00 UTC 2020
-
-		log.debug("timestamp from millis80: " + new Timestamp(toMillis(millis80)));
-		log.debug("date from millis80: " + new Date(toMillis(millis80)));
-		log.debug("date from seconds80: " + new Date(toMillis(seconds80)));
+		log.debug("timestamp from millis80: " + toTimestamp(toMillis(millis80)));
+		log.debug("date from millis80: " + toDate(toMillis(millis80)));
+		log.debug("date from seconds80: " + toDate(toMillis(seconds80)));
 	}
 
 	public void main() {

@@ -1,0 +1,9 @@
+2020-07-30 14:10:00.567 DEBUG 21212 --- [           main] poc.java.JavaTimeApplication             : Running with Spring Boot v2.3.2.RELEASE, Spring v5.2.8.RELEASE
+2020-07-30 14:10:00.567  INFO 21212 --- [           main] poc.java.JavaTimeApplication             : No active profile set, falling back to default profiles: default
+2020-07-30 14:10:01.014  INFO 21212 --- [           main] poc.java.JavaTimeApplication             : Started JavaTimeApplication in 0.871 seconds (JVM running for 1.578)
+2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.JavaTimeApplication             : commandLineRunner service
+2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : main service
+2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : main service
+2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : timestamp from millis80: 2020-04-29 15:12:43.0
+2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : date from millis80: 2020-04-29
+2020-07-30 14:10:01.018 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : date from seconds80: 2020-04-29
