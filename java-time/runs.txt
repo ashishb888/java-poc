@@ -7,3 +7,15 @@
 2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : timestamp from millis80: 2020-04-29 15:12:43.0
 2020-07-30 14:10:01.017 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : date from millis80: 2020-04-29
 2020-07-30 14:10:01.018 DEBUG 21212 --- [           main] poc.java.service.JavaTimeService         : date from seconds80: 2020-04-29
+
+----------=----------
+Run 2: Different timezones
+
+2020-08-10 12:46:49.271  INFO 12952 --- [           main] poc.java.JavaTimeApplication             : Started JavaTimeApplication in 0.704 seconds (JVM running for 1.254)
+2020-08-10 12:46:49.273 DEBUG 12952 --- [           main] poc.java.JavaTimeApplication             : commandLineRunner service
+2020-08-10 12:46:49.274 DEBUG 12952 --- [           main] poc.java.service.JavaTimeService         : main service
+2020-08-10 12:46:49.274 DEBUG 12952 --- [           main] poc.java.service.JavaTimeService         : main service
+2020-08-10 12:46:49.276 DEBUG 12952 --- [           main] poc.java.service.JavaTimeService         : timestamp from millis80: 2020-04-29 15:12:43.0
+2020-08-10 12:46:49.276 DEBUG 12952 --- [           main] poc.java.service.JavaTimeService         : timestamp from millis80 toMillisPt: 2020-04-29 20:42:43.0
+2020-08-10 12:46:49.277 DEBUG 12952 --- [           main] poc.java.service.JavaTimeService         : date from millis80: 2020-04-29
+2020-08-10 12:46:49.277 DEBUG 12952 --- [           main] poc.java.service.JavaTimeService         : date from seconds80: 2020-04-29
