@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: java-bytebuffer
+  
+logging:
+  level:
+    root: info
+    poc.java: debug
+  file: /var/log/apps/java-bytebuffer/java-bytebuffer
