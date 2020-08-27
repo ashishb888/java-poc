@@ -27,12 +27,31 @@ public class ByteBufferService {
 		bb1.putLong(24, d.getTime()); // Putting dates
 		bb1.putLong(32, t.getTime()); // Putting timestamps
 
-		log.debug("Position 0: " + getStringFromByteBuffer(bb1, 0, 10)); // Getting strings
-		log.debug("Position 10: " + getStringFromByteBuffer(bb1, 10, 10));
-		log.debug("Position 20: " + bb1.getInt(20));
-		log.debug("Position 24: " + toDate(bb1.getLong(24))); // Formatting date to a custom format
-		log.debug("Position 32: " + toTimestamp(bb1.getLong(32))); // Formatting timestamp to a custom format
+		// bb1.flip();
 
+//		log.debug("Position 0: " + getStringFromByteBuffer(bb1, 0, 10)); // Getting strings
+//		log.debug("Position 10: " + getStringFromByteBuffer(bb1, 10, 10));
+//		log.debug("Position 20: " + bb1.getInt(20));
+//		log.debug("Position 24: " + toDate(bb1.getLong(24))); // Formatting date to a custom format
+//		log.debug("Position 32: " + toTimestamp(bb1.getLong(32))); // Formatting timestamp to a custom format
+
+		long millis = System.currentTimeMillis();
+		ByteBuffer bb2 = ByteBuffer.allocate(bb1.limit() + 26);
+		// bb2.position(0);
+		bb2.put(bb1.array());
+		bb2.position(40);
+		bb2.put("Second BB".getBytes());
+		bb2.putLong(50, new Timestamp(millis).getTime());
+		bb2.putLong(58, new Date(millis).getTime());
+
+		log.debug("Position 0: " + getStringFromByteBuffer(bb2, 0, 10)); // Getting strings
+		log.debug("Position 10: " + getStringFromByteBuffer(bb2, 10, 10));
+		log.debug("Position 20: " + bb2.getInt(20));
+		log.debug("Position 24: " + toDate(bb2.getLong(24))); // Formatting date to a custom format
+		log.debug("Position 32: " + toTimestamp(bb2.getLong(32))); // Formatting timestamp to a custom format
+		log.debug("Position 40: " + getStringFromByteBuffer(bb2, 40, 10));
+		log.debug("Position 50: " + toTimestamp(bb2.getLong(50))); // Formatting timestamp to a custom format
+		log.debug("Position 58: " + toDate(bb2.getLong(58))); // Formatting date to a custom format
 	}
 
 	static DateTimeFormatter timestampFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
