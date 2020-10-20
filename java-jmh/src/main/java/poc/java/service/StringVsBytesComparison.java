@@ -17,7 +17,7 @@ import org.openjdk.jmh.annotations.Warmup;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Warmup(iterations = 3, time = 5)
 @Measurement(iterations = 5, time = 10)
-@Threads(1)
+@Threads(10)
 //@Fork(1)
 @State(Scope.Benchmark)
 public class StringVsBytesComparison {
