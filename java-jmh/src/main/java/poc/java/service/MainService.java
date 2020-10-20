@@ -8,7 +8,7 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 public class MainService {
 
 	public static void main(String... args) throws RunnerException {
-		Options opt = new OptionsBuilder().include(BenchmarkModes.class.getSimpleName()).forks(1).build();
+		Options opt = new OptionsBuilder().include(StringVsBytesComparison.class.getSimpleName()).forks(1).build();
 
 		new Runner(opt).run();
 	}
