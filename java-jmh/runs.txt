@@ -374,3 +374,12 @@ StringVsBytesComparison.bytesComparison   thrpt    5    0.033 ±  0.001  ops/ns
 StringVsBytesComparison.stringComparison  thrpt    5    0.038 ±  0.001  ops/ns
 StringVsBytesComparison.bytesComparison    avgt    5  305.342 ±  9.637   ns/op
 StringVsBytesComparison.stringComparison   avgt    5  229.432 ± 13.118   ns/op
+
+----------==----------
+RUN 4: String comparison vs char array comparison
+
+Benchmark                                   Mode  Cnt   Score   Error   Units
+StringVsCharsComparison.charsComparison    thrpt    5   0.038 ± 0.001  ops/ns
+StringVsCharsComparison.stringsComparison  thrpt    5   0.047 ± 0.001  ops/ns
+StringVsCharsComparison.charsComparison     avgt    5  26.832 ± 0.704   ns/op
+StringVsCharsComparison.stringsComparison   avgt    5  22.163 ± 1.965   ns/op
