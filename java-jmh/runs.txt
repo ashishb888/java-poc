@@ -225,3 +225,15 @@ StringVsBytesComparison.bytesComparison   thrpt    5   0.011 ± 0.002  ops/ns
 StringVsBytesComparison.stringComparison  thrpt    5   0.467 ± 0.012  ops/ns
 StringVsBytesComparison.bytesComparison    avgt    5  91.969 ± 1.756   ns/op
 StringVsBytesComparison.stringComparison   avgt    5   2.363 ± 0.442   ns/op
+
+
+----------==----------
+RUN 2: String comparison vs byte array comparison
+
+In this run we are converting byte array to string and then we compare the strings
+
+Benchmark                                  Mode  Cnt   Score    Error   Units
+StringVsBytesComparison.bytesComparison   thrpt    5   0.010 ±  0.003  ops/ns
+StringVsBytesComparison.stringComparison  thrpt    5   0.013 ±  0.001  ops/ns
+StringVsBytesComparison.bytesComparison    avgt    5  92.488 ±  2.030   ns/op
+StringVsBytesComparison.stringComparison   avgt    5  79.027 ±  1.319   ns/op

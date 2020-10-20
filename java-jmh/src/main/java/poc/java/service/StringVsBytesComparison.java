@@ -22,10 +22,13 @@ import org.openjdk.jmh.annotations.Warmup;
 @State(Scope.Benchmark)
 public class StringVsBytesComparison {
 
+	byte[] ba1 = "Hello".getBytes();
+	byte[] ba2 = "Hello".getBytes();
+
 	@Benchmark
 	public boolean stringComparison() {
-		String s1 = "Hello";
-		String s2 = "Hello";
+		String s1 = new String(ba1);
+		String s2 = new String(ba2);
 
 		return s1.equals(s2);
 	}
