@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: active-threads
+    
+logging:  file:    name: /var/tmp/${spring.application.name}/${spring.application.name}
+  level:    root: info
+    poc.java: debug
